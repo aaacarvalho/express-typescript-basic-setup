@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
 import { Controller, HttpRequest } from '../../presentation/interfaces'
 
-export const expressRequestAdapter = (controller: Controller): Function => {
-  return async (request: Request, response: Response): Promise<void> => {
+export const adaptRoute = (controller: Controller) => {
+  return async (request: Request, response: Response) => {
     const httpRequest: HttpRequest = {
       body: request.body
     }
